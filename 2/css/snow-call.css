@@ -1,0 +1,113 @@
+/* Container for the content under the navbar */
+#snow-call-container {
+  height: calc(100vh - 54px);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Alarm that does nothing... yet */
+#call-everybody {
+  position: fixed;
+  margin: 12px 12px auto auto;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  box-sizing: content-box;
+}
+
+/* Container for the employees and call status */
+#main {
+  position: relative;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 50%;
+  height: calc(100vh - 54px);
+  width: 70vw;
+  margin: 0 auto;
+  background-color: rgba(100, 100, 255, 0.5);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  #main {
+    width: 100%;
+    padding: 12px 12px;
+  }
+}
+
+.each-side {
+  width: 100%;
+}
+
+/* JavaScript builds this list from the employees in the database */
+#employees-on-the-left {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+#employees-on-the-left li {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: auto 52px;
+  width: calc(100%);
+  height: auto;
+  font-size: 1.4rem;
+  color: black;
+  background-color: space;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  background-color: rgba(250, 250, 250, 0.6);
+}
+
+#employees-on-the-left li p {
+  grid-area: 1 / 1 / span 1 / span 1;
+  padding: 12px;
+}
+
+#employees-on-the-left li:hover {
+  background-color: rgba(50, 50, 100, 0.9);
+  color: white;
+}
+
+.phone-icon {
+  grid-area: 1 / 2 / span 1 / span 1;
+  box-sizing: border-box;
+}
+
+.phone-icon img {
+  height: 42px;
+  margin: 4px 6px 4px auto;
+}
+
+.phone-icon img:hover {
+  filter: invert(80%);
+}
+
+/* Status of each call */
+#status-on-the-right {
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+#status-on-the-right li {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: auto 52px;
+  width: calc(100%);
+  height: 51px;
+  font-size: 1.4rem;
+  padding: 14px;
+  color: black;
+  background-color: space;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  background-color: rgba(250, 250, 250, 0.6);
+}
+
+.boo-yah {
+  background-color: rgba(6, 95, 6, 0.5);
+}
+
+.boo-nah {
+  background-color: rgba(95, 6, 6, 0.5);
+}

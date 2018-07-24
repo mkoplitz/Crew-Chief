@@ -1,0 +1,12 @@
+.punch-button {
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-left: calc(50vw - 150px);
+  margin-top: 10vh;
+  text-align: center;
+  position: relative;
+}

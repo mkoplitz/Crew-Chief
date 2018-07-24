@@ -1,0 +1,268 @@
+/* Container for the two divs under the navbar */
+#employees-container {
+  display: grid;
+  height: calc(100vh - 54px);
+  width: 100%;
+  grid-template-rows: 100%;
+  grid-template-columns: 20% 80%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Container on the left */
+#employees-list {
+  display: grid;
+  grid-area: 1 / 1 / span 1 / span 1;
+  grid-template-rows: repeat(2, 50px) auto;
+  grid-template-columns: 100%;
+  height: calc(100vh - 54px);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  padding: 0;
+  border-right: 2px solid black;
+}
+
+
+/* Add an employee screen */
+#add-employee {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1 / span 1 / span 1;
+  color: white;
+  transition: 0.4s;
+  margin: 0;
+}
+
+#add-employee h3 {
+  width: 70%;
+  height: auto;
+  background-color: rgba(0, 0, 55, 1.0);
+  padding: 7px;
+  color: white;
+  transition: 0.4s;
+  margin: 12px auto 0 auto;
+  text-align: center;
+}
+
+#add-employee h3:hover {
+  background-color: rgba(0, 0, 55, 0.6);
+  transition: 0.05s;
+}
+
+#phone0,
+#phone1,
+#phone2 {
+  font-size: 1rem;
+  margin-right: 0.6rem;
+}
+
+#phone0,
+#phone1 {
+  width: 1.8rem;
+}
+
+#phone2 {
+  width: 2.4rem;
+}
+
+
+/* Nice search field bro */
+#search-employees {
+  grid-area: 2 / 1 / span 1 / span 1;
+  width: 100%;
+  margin: 0;
+}
+
+#search-employees-text-field {
+  display: block;
+  margin: 6px auto 0 auto;
+  width: 80%;
+  height: 24px !important;
+  padding: 6px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(60, 60, 60, 0.6);
+  box-sizing: none;
+}
+
+
+/* Self-populating list of employees on the left */
+#list-of-employees {
+  width: calc(100% + 14px);
+  grid-area: 3 / 1 / span 1 / span 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  direction: rtl;
+  text-align: left;
+  transform: translateX(-15px);
+  margin: 12px 0 0 0;
+  border-top: 1px solid white;
+}
+
+#list-of-employees li {
+  width: calc(100%);
+  height: auto;
+  font-size: 1.4rem;
+  color: black;
+  background-color: space;
+  border-bottom: 1px solid white;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(250, 250, 250, 0.6);
+}
+
+#list-of-employees li:hover {
+  background-color: rgba(50, 50, 100, 0.9);
+  color: white;
+}
+
+.selected-employee {
+  background-color: rgba(0, 0, 55, 1.0) !important;
+  color: white !important;
+}
+
+
+/* Container on the right */
+.content-container {
+  grid-area: 1 / 2 / span 1 / span 1;
+  height: calc(100vh - 54px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.content {
+  margin: 0;
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  padding: 2.0rem;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+#new-employee {
+  grid-template-rows: 15% 75% 15%;
+  grid-template-columns: 30% 30% 40%;
+  line-height: 1.2;
+}
+
+
+/* Columns that hold the input fields to add a new employee */
+.first {
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.second {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.third {
+  grid-area: 2 / 3 / span 1 / span 1;
+}
+
+
+/* The input fields themselves */
+input {
+  display: inline-block;
+  margin: 12px auto 6px auto;
+  width: 80%;
+  height: 24px;
+  padding: 6px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(60, 60, 60, 0.6);
+  box-sizing: content-box;
+}
+
+
+/* Buttons for doing stuff */
+.call-button {
+  grid-area: 3 / 1 / span 1 / span 1;
+}
+
+.call-button h3 {
+  margin: 24px 0;
+  padding: 6px;
+  box-sizing: content-box;
+  background-color: rgba(0, 0, 55, 1.0);
+  color: white;
+  width: 100px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.call-button h3:hover {
+  background-color: rgba(0, 0, 55, 0.4);
+  transition: 0s;
+}
+
+.submit-button h3 {
+  margin: 24px 0;
+  padding: 6px;
+  box-sizing: content-box;
+  background-color: rgba(0, 0, 55, 1.0);
+  color: white;
+  width: 100px;
+  text-align: center;
+  transition: 0.4s;
+  float: right;
+}
+
+.submit-button h3:hover {
+  background-color: rgba(0, 0, 55, 0.4);
+  transition: 0s;
+}
+
+.submit-button {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
+#delete-client h3 {
+  background-color: rgba(100, 0, 0, 1.0);
+  transition: 0.4s;
+}
+
+#delete-client h3:hover {
+  background-color: rgba(100, 0, 0, 0.4);
+  transition: 0s;
+}
+
+
+/* "Great Success" */
+#confirmation {
+  display: none;
+}
+
+#this-employee {
+  height: 100%;
+  grid-template-rows: 15% 75% 15%;
+  grid-template-columns: 30% 30% 40%;
+  line-height: 1.2;
+}
+
+#this-employee h2 {
+  line-height: 1.4;
+}
+
+#employee-data-container {
+  grid-area: 1 / 1 / span 2 / span 3;
+  font-family: Roboto !important;
+}
+
+#boilerplate ul {
+  list-style-type: disc;
+  margin: 1rem auto auto 3rem;
+}
+
+#notes {
+  width: 80%;
+  height: 80%;
+}
